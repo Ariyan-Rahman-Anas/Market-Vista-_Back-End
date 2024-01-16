@@ -1,0 +1,19 @@
+{
+  "name": "marketvista__back-end",
+  "version": "1.0.0",
+  "description": "MarketVista E-Commerce MERN-Stack-Project ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MarketVista",
+    "E-Commerce",
+    "MERN-Stack-Project"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
