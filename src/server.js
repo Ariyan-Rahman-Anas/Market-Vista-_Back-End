@@ -1,12 +1,9 @@
-const app = require("./app")
-const port = 5001;
+const app = require("./app");
+const { serverPort } = require("./secret");
 
-app.listen(port, () => {
-    console.log(`The MarketVista Server is running http://localhost:${port}`)
-})
-
-
-
+app.listen(serverPort, () => {
+  console.log(`The MarketVista Server is running http://localhost:${serverPort}`);
+});
 
 //no need this //middleware
 // const isLoggedIn = (req, res, next) => {
