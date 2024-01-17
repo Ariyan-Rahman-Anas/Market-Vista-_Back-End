@@ -6,6 +6,7 @@ const xssClean = require("xss-clean")
 const rateLimit = require("express-rate-limit");
 const userRouter = require("./Routers/userRouter");
 const seedRouter = require("./Routers/seedRouter");
+const { errorResponse } = require("./Controllers/responseController");
 const app = express();
 
 //creating limit
@@ -40,10 +41,10 @@ app.use((req, res, next) => {
 
 //server error handling
 app.use((err, req, res, next) => {
-    return res.status(err.status || 500).json({
-        success: false,
-        message: err.message
-    })
+  return errorResponse(res, {
+    statusCode: err.status,
+    message: err.message
+  })
 });
 
 module.exports = app
