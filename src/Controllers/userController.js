@@ -8,7 +8,7 @@ const getUsers = (req, res, next) => {
     console.log(req.body.id);
     res.status(200).send({
       message: "Users were returned!",
-      users: users,
+      users: users
     });
   } catch (error) {
       next(error)
